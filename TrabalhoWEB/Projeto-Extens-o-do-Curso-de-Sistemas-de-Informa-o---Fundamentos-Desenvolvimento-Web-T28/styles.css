@@ -1,0 +1,41 @@
+main{
+    .imgs {
+        display: flex;
+    }
+    .image-box {
+        width: 25%;
+        padding: 10px;
+    }
+    .image-box img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+    .top-navigation {
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .top-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-navigation li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .top-navigation li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+  }
+  
+  .top-navigation li a:hover {
+    color: black;
+    background-color: white;
+  }
