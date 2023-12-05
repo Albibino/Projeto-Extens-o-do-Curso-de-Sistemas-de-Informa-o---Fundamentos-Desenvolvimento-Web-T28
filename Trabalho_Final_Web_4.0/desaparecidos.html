@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gatos, cachorros, animais, desaparecidos, divulgação">
+    <meta name="author" content="Julia da Silva Fitzlaff & William Wollert">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fira+Sans:ital@1&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/megafone.png">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>APAD SOS</title>
+    <style>
+      .infos {
+          display: none;
+      }
+  </style>
+</head>
+<body>
+    <header>
+        <a id="link" href="index.html">Página Inicial</a>
+        <a id="link" href="sobre.html">Sobre</a>
+        <a id="link" href="desaparecidos.html">Desaparecidos</a>
+        <a id="link" href="cadastro.html">Registrar</a>
+    </header>
+
+    <main style="background-color: #C6624A; text-align: center">
+      <br>
+      <h2>Desaparecidos</h2>
+      <br>
+      <div class="imgs">
+          <div class="image-box">
+              <img src="img/cachorro1.png" alt="Imagem 1">
+              <p id="infos1" class="infos"><b>Enzo (Macho)</b><br>
+              Raça Bull Terrier (Porte Médio)<br>
+              Desaparecimento: 20/10/2022<br>
+              Local: Rua Esmeralda - Centro<br>
+              Rio do Sul<br>
+              Telefone: (47)98822-1111</p>
+              <button id="ver" onclick="mostrarInfos('infos1')">Ver Mais</button>
+          </div>
+          <div class="image-box">
+              <img src="img/cachorro2.png" alt="Imagem 1">
+              <p id="infos2" class="infos"><b>Belinha (Fêmea)</b><br>
+              Raça Vira-Lata (Porte Médio)<br>
+              Desaparecimento: 20/11/2022<br>
+              Local: Rua Joaquim - Centro<br>
+              Rio do Sul<br>
+              Telefone: (47)98822-2222</p>
+              <button id="ver" onclick="mostrarInfos('infos2')">Ver Mais</button>
+          </div>
+          <div class="image-box">
+              <img src="img/cachorro3.png" alt="Imagem 3">
+              <p id="infos3" class="infos"><b>Flor (Fêmea)</b><br>
+              Raça Pug (Porte Pequeno)<br>
+              Desaparecimento: 05/02/2023<br>
+              Local: Travessa Marechal - Centro<br>
+              Aurora<br>
+              Telefone: (47)98822-3333</p>
+              <button id="ver" onclick="mostrarInfos('infos3')">Ver Mais</button>
+          </div>
+          <div class="image-box">
+              <img src="img/cachorro4.png" alt="Imagem 4">
+              <p id="infos4" class="infos"><b>Thor (Macho)</b><br>
+              Raça Border Collie (Porte Grande)<br>
+              Desaparecimento: 20/10/2022<br>
+              Local: Avenida Rosas - Centro<br>
+              Lontras<br>
+              Telefone: (47)98822-4444</p>
+              <button id="ver" onclick="mostrarInfos('infos4')">Ver Mais</button>
+          </div>
+      </div>
+  </main>
+
+  <script>
+      function mostrarInfos(id) {
+          var infosElement = document.getElementById(id);
+          infosElement.style.display = (infosElement.style.display === 'none') ? 'block' : 'none';
+      }
+  </script>
+</body>
+</html>

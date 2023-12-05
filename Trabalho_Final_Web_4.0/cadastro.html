@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="gatos, cachorros, animais, desaparecidos, divulgação">
+    <meta name="author" content="Julia da Silva Fitzlaff & William Wollert">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fira+Sans:ital@1&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/megafone.png">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>APAD SOS</title>
+</head>
+<body>
+    <header>
+        <a id="link" href="index.html">Página Inicial</a>
+        <a id="link" href="sobre.html">Sobre</a>
+        <a id="link" href="desaparecidos.html">Desaparecidos</a>
+        <a id="link" href="cadastro.html">Registrar</a>
+    </header>
+    <main id="feedback">
+    <h2>Registre o desaparecimento</h2>
+    <form id="formulario" action="" method="get" enctype="multipart/form-data">
+        <label for="imagem">Escolha uma imagem:</label>
+        <input type="file" id="imagem" name="imagem" accept="image/*" required>
+        <br>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+        <br>
+        <label for="sexo">Sexo:</label>&nbsp;
+        <input type="radio" id="femea" name="sexo"><label for="femea">Fêmea</label>&nbsp;
+        <input type="radio" id="macho" name="sexo"><label for="macho">Macho</label>
+        <br>
+        <label for="raca">Raça:</label>
+        <input type="text" id="nome" name="nome">
+        <br>
+        <label for="porte">Porte:</label>
+        <select name="porte" id="lang">
+            <option value="pequeno">Pequeno</option>
+            <option value="medio">Médio</option>
+            <option value="grande">Grande</option>
+        </select>
+        <br>
+        <label for="data">Data de desaparecimento:</label>
+        <input type="date" id="dataDesaparecimento" name="dataDesaparecimento" required>
+        <br>
+        <br>
+        <label for="local">Local de desaparecimento:</label>
+        <br>
+        <label for="logradouro">Logradouro:</label>
+        <input type="text" id="logradouro" name="logradouro" placeholder="Rua/Avenida/Travessa....."  required>
+        <br>
+        <label for="Bairro">Bairro:</label>
+        <input type="text" id="bairro" name="bairro" required>
+        <br>
+        <label for="Cidade">Cidade:</label>
+        <input type="text" id="cidade" name="cidade" required>
+        <br>
+        <label for="Telefone">Telefone para contato:</label>
+        <input type="text" id="telefone" name="telefone" required>
+        <br>
+        <label for="iMensagem">Observação:</label><br>
+        <textarea id="iMensagem" name="mensagem" placeholder="Descreva aqui..." rows="6" cols="60"></textarea>
+        <br>
+        <br>
+        <br>
+        <button type="submit" id="button">Enviar</button>
+    </form>
+    <br>
+</main>
+<script>
+    document.getElementById("button").addEventListener("click", function() {
+        
+        if (validarCamposObrigatorios()) {
+            alert("Dados enviados com sucesso!");
+        } else {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+        }
+    });
+
+    function validarCamposObrigatorios() {
+        var camposObrigatorios = document.querySelectorAll('[required]');
+        for (var i = 0; i < camposObrigatorios.length; i++) {
+            if (!camposObrigatorios[i].value) {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>
